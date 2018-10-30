@@ -30,18 +30,21 @@
         getMessages()
     })
 
+    //socket to display messages on client without making call to server
     socket.on('message', addMessage)
 
+    //Function to display messages coming from server
     function addMessage(message){
         $("#messages").append(`<h4> ${message.name} </h4> <p> ${message.message} </p>`)
     }
 
+    //Retrieve the messages from the server
     function getMessages() {
         $.get('http://localhost:3000/messages', (data) => {
             data.forEach(addMessage);
         })
     }
-
+    //Function call to send messsages to the server
     function postMessage(message) {
         $.post('http://localhost:3000/messages', message)
     }
