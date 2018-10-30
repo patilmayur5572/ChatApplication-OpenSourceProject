@@ -1,5 +1,5 @@
 # ChatApplication-OpenSourceProject
-This is Chat Application developed in Jquery, Node JS and Mongo DB
+This is Chat Application developed in Jquery, Node JS, Mongo DB and <a href="https://socket.io/docs/">Socket IO</a>. The reason i am using Socket IO because it is compaitable with older browser versions and has a capability to switch back to Web Sockets for older version browsers. 
 
 
 
